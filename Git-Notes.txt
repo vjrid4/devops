@@ -44,4 +44,18 @@ To list the configurations:
 git config --list
 git config user.name
 
+Day 2:
+======
+Task: How to push local directory contents to github.com
 
+STEP 1: git init => which will initialize the local directory as a Git repo.
+STEP 2: git add . =>Stage the files in the current directory to new repo
+STEP 3: git commit -m "First Commit" => commits the tracked changes and prepares them to be pushed to a remote repo. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+STEP 4: to set remote github repo, copy the repo URL and execute command as 'git remote add origin https://github.com/vjrid4/devops.git'
+STEP 5: To display remote URL, you can use 'git remote -v'
+STEP 6: Now push the changes to remote git repo using command 'git push origin master'
+
+git init command
+Initialize the local directory as a Git repository.
+
+Add the files in your new local repository. This stages them for the first commit.
