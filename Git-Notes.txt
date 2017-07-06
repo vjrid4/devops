@@ -1,0 +1,47 @@
+GIT is a distributed version control system.
+
+Earlier we have several version control systems in place but none of them is as famous as SVN or GIT.
+
+All version control systems works from central repository.
+
+1. Source Code Control system(SCCS)-1972
+2. Revision Control System - 1982
+3. Concurrent Version Control System(CVS) 1986-1990)
+4. Apache Subversion(SVN) - 2000 Opensource
+5. BitKeeper SCM -2000 - Distributed version control system - Proprietary
+6. GIT - Linus Torvols - 2005
+
+All repositories work as pull the code from central repository, make changes and submit the changes back to the central repository.
+
+But in GIT, different users(or teams of users) maintain their own repos, instead working from a central repo. 
+Changes are stored as "Change Sets" or "Patches". 
+Means tracks changes, not versions7
+Different from CVS and SVN, which track versions
+
+Installation:
+===============
+Download it from http://git-scm.com
+
+Configuration Files:
+======================
+System:
+	/etc/gitconfig
+	/Program Files/Git/etc/gitconfig
+User:
+	~/.gitconfig
+	$HOME/.gitconfig - in windows
+Project:
+	my_project/.git/config
+
+git config --system => to configure system wide  
+git config --global => to configure user configuration
+git config => to configure project configuration
+
+Ex: git config --global user.name "vjrid4"
+git config --global user.email "vjrid4@gmail.com"
+
+To list the configurations:
+git config --list
+git config user.name
+
+

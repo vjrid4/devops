@@ -1,0 +1,12 @@
+kubernetis concept
+
+pod is there. In pod, we can run different services. We can deply myspace app in a pod
+Each pod will have IP Address
+
+SkyDNS=>DNS
+
+Bastion Server
+
+mesos marthan
+
+2316 - home

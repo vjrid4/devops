@@ -1,0 +1,28 @@
+Jenkins - Build and Deploy tool
+GIT - Code Repository
+Maven - 
+Artifactory - 
+Ant - 
+Consul - 
+
+Continuous Integration Tools:
+=============================
+Jenkins
+
+
+Continuous Delivery and Continuous Deployment Tools:
+====================================================
+
+
+
+Configuration Management Tools:
+===============================
+Ansible
+Bcfg2
+CFEngine
+Chef
+Puppet
+Saltstack
+Vagrant
+
+===============================================
