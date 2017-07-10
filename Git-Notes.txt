@@ -124,6 +124,22 @@ git diff <file name> gives changes made to pirticualr file.
 git diff --staged [ in earlier versions(>1.7), its git diff --cached ]
 git diff by default gives changes made to your working directory. It doesnt list the changes from staging. To get the differences made to staging, use the command git diff --staged.
 
+git rm <file to be deleted> => git remove a file
+======
+If we delete a file from the working directory, we need to tell git to delete it from repo also using git rm command. If we directly use git rm to delete a file, it deletes permenantly without moving it to trash.
+
+Moving and Renaming Files:
+==========================
+Renaming: there are two ways to do this. First is do it from operating system and tell git to remove the old file. Second way is directly from git using git mv original.file newnamed.file
+
+
+tracked and untracked files:
+=============================
+Untracked files are just files created in working directory. when you say "git status", these files are shown in RED Color means they were not yet added to Staging.
+
+Tracked files are the files added to Staging using "git add <file(s)>
+
+
 
 
 
