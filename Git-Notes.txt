@@ -51,11 +51,80 @@ Task: How to push local directory contents to github.com
 STEP 1: git init => which will initialize the local directory as a Git repo.
 STEP 2: git add . =>Stage the files in the current directory to new repo
 STEP 3: git commit -m "First Commit" => commits the tracked changes and prepares them to be pushed to a remote repo. To remove this commit and modify the file, use 'git reset --soft HEAD~1' and commit and add the file again.
+Label can be 50 char long as best practice with ticket number or bug fix..
 STEP 4: to set remote github repo, copy the repo URL and execute command as 'git remote add origin https://github.com/vjrid4/devops.git'
 STEP 5: To display remote URL, you can use 'git remote -v'
 STEP 6: Now push the changes to remote git repo using command 'git push origin master'
 
-git init command
-Initialize the local directory as a Git repository.
+git log: what changes are commited
+========
+git log
+git log -n <number of commits>
+git log -n 1
+git log --since=2012-06-15
+git log --until=2012-06-15
+git log --author='vjrid4'
+git log --grep='Init'
 
-Add the files in your new local repository. This stages them for the first commit.
+
+GIT Architecture:
+================
+Two tree architecture:We call this tree structure, becuase they represent two file trees.
+	- Master repository (=>check out to working copy)
+	- (<=Commit changes to Master Repo) working copy
+
+Three Tree Architecture:
+
+	- Repository
+	-Staging Index => commit to repo (git commit -m <test> )
+	-Working Copy => Add files to staging( git add .)
+
+GIT Workflow:
+=============
+Typically git workflow starts adding a file to the working copy. Then move it to staging index using git add <file.txt> and then commit changes using git commit -m <about this commit>
+
+Add/Edit a File (Working copy)
+git add <file.name> (Staging Index0
+commit -m (Repository)
+
+Hash Values#
+=============
+How git refers to each commit or changes made to a repository or sets of changes made to a repository. Change sets are snapshots those are the changes made.
+checksum alogorithms convert data into a simple number
+same data always equals same checksum
+data integrity is fundamental
+changing data would change checksum
+
+Git uses SHA-1 hash algorithm to create checksums
+its a 40 character hexa string which is a commit ID which we can see in git log.
+
+Each commit number is mapped to a snapshot as discussed above. also each commit has parent, author and message details along.
+
+the HEAD pointer:
+=================
+point to a commit. Point to tip of the current branch in repository.
+last state of repo, what was last checked out
+points to parent of next commit
+
+HEAD is like tape recorder head. Wherever head is recording starts from there. As same in git, if we commit changes, HEAD is at current repo and this HEAD is the parent for next commit. Means changes will start from here till next commit. so head is always point to recent commit.
+
+there is a file in each repo in .git\HEAD. if we display the file, it displays  refs/heads/master. If we go to that path, and display master, it gives the commit ID which is head.
+
+Making changes to files:
+========================
+go to current working copy direcotry
+git status
+git status gives us the difference between working directory, staging Index and repository.
+If add new files and execute git status, it displays new files which are added and asks to add them to staging o commit changes to repository.
+so git status is a very good command to know what are the changes we made from last commit and what are at staging Index and what are at working copy.
+
+git diff:
+Gives the difference
+git diff <file name> gives changes made to pirticualr file.
+git diff --staged [ in earlier versions(>1.7), its git diff --cached ]
+git diff by default gives changes made to your working directory. It doesnt list the changes from staging. To get the differences made to staging, use the command git diff --staged.
+
+
+
+
+

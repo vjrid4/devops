@@ -1,0 +1,4 @@
+Apache Ant was the first among "moderan" build tools. In many aspects it is similar to make. It was released in 2000 and in a short period of time became the most popular build tool for Java projects. It has a very low learning curve thus allowing anyone to start using it without any special preparation. its based on procedural programming idea.
+
+After its initial release, it was improved with the ability to accept plug-ins.
+
